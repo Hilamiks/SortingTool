@@ -10,24 +10,24 @@ class CountSorter {
 
         switch(dataType) {
             case ("line"):
-                System.out.println("Total lines: " + toSort.size());
+                Main.output.append("Total lines: ").append(toSort.size()).append("\n");
                 sortedCounter = sortText(toSort);
                 for (String s : sortedCounter.keySet()) {
-                    System.out.println(s + ": " + sortedCounter.get(s) + " time(s), " + (100*sortedCounter.get(s)/toSort.size()) +"%");
+                    Main.output.append(s).append(": ").append(sortedCounter.get(s)).append(" time(s), ").append(100 * sortedCounter.get(s) / toSort.size()).append("%\n");
                 }
                 break;
             case ("number"):
-                System.out.println("Total numbers: " + toSort.size());
+                Main.output.append("Total numbers: ").append(toSort.size()).append("\n");
                 sortedCounterNums = sortNums(toSort);
                 for (Integer i : sortedCounterNums.keySet()) {
-                    System.out.println(i + ": " + sortedCounterNums.get(i) + " time(s), " + (100*sortedCounterNums.get(i)/toSort.size()) +"%");
+                    Main.output.append(i).append(": ").append(sortedCounterNums.get(i)).append(" time(s), ").append(100 * sortedCounterNums.get(i) / toSort.size()).append("%\n");
                 }
                 break;
             default:
-                System.out.println("Total words: " + toSort.size());
+                Main.output.append("Total words: ").append(toSort.size()).append("\n");
                 sortedCounter = sortText(toSort);
                 for (String s : sortedCounter.keySet()) {
-                    System.out.println(s + ": " + sortedCounter.get(s) + " time(s), " + (100*sortedCounter.get(s)/toSort.size()) +"%");
+                    Main.output.append(s).append(": ").append(sortedCounter.get(s)).append(" time(s), ").append(100 * sortedCounter.get(s) / toSort.size()).append("%\n");
                 }
                 break;
         }

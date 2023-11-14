@@ -19,10 +19,10 @@ class WordSorting implements SortingMethod {
             default:
                 //System.out.println("sorting words naturally");
                 toSort.sort(new StringComparator());
-                System.out.println("Total words: " + toSort.size() + ".");
-                System.out.print("Sorted data: ");
+                Main.output.append("\nTotal words: ").append(toSort.size()).append(".");
+                Main.output.append("\nSorted data: ");
                 for (String s : toSort) {
-                    System.out.print(s + " ");
+                    Main.output.append(s).append(" ");
                 }
                 break;
 
@@ -41,10 +41,10 @@ class LineSorting implements SortingMethod {
             default:
                 //System.out.println("sorting lines naturally");
                 toSort.sort(new StringComparator());
-                System.out.println("Total lines: " + toSort.size() + ".");
-                System.out.println("Sorted data: ");
+                Main.output.append("\nTotal lines: " + toSort.size() + ".\n");
+                Main.output.append("Sorted data: \n");
                 for (String s : toSort) {
-                    System.out.println(s);
+                    Main.output.append(s).append("\n");
                 }
                 break;
 
@@ -63,10 +63,10 @@ class NumberSorting implements SortingMethod {
             default:
                 //System.out.println("sorting numbers naturally");
                 toSort.sort(new NumberComparator());
-                System.out.println("Total numbers: " + toSort.size() + ".");
-                System.out.print("Sorted data: ");
+                Main.output.append("\nTotal numbers: ").append(toSort.size()).append(".");
+                Main.output.append("\nSorted data: ");
                 for (String s : toSort) {
-                    System.out.print(s + " ");
+                    Main.output.append(s).append(" ");
                 }
                 break;
         }
